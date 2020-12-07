@@ -1,0 +1,497 @@
+// imports
+
+@import "keyframes";
+@import "mixins";
+
+
+// presets
+
+
+
+ul{
+    padding: 0;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.subhead{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 50px;
+}
+
+.mustache-underline{
+    width: 3rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.2s;
+    display: none;
+}
+
+// navbar
+.top-nav{
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    top: 0;
+    z-index: 5;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.links{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+#top-logo{
+    font: 50px 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+
+// main section
+
+.main-section{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    & .dark-cover{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(#000000,0.6);
+        position: absolute;
+    }
+    
+    & .main-bg{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+
+#scissors{
+    width: 20rem;
+    position: absolute;
+    top: 7rem;
+    z-index: 6;
+}
+
+
+
+// services section
+
+.services{
+    width: 100vw;
+    height: 100vh;
+    @include centerXColumn;
+    background-color: rgb(0, 0, 0);
+    
+    & h1{
+        color: white;
+        margin-top: 10rem;
+    }
+}
+
+.services-menu{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+    & ul{
+        list-style: none;
+        font: 25px 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: white;
+
+        & li{
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+#hairguy{
+    width: 10rem;
+    margin-bottom: 5rem;
+}
+
+
+// about us
+
+.about-section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.about-wrapper{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.about-info{
+    width: 30%;
+    @include centerXColumn;
+    text-align: center;
+
+    & p{
+        font-size: 25px;
+    }
+}
+
+#shop-img{
+    width: 50%;
+}
+
+#big-blade{
+    position: absolute;
+    left: 10rem;
+    top: -15rem;
+    width: 35rem;
+}
+
+// The Barbers
+
+.barber-section{
+    width: 100vw;
+    height: auto;
+    @include centerXColumn;
+    background-color: black;
+    padding: 2rem 0rem;
+    position: relative;
+    padding-bottom: 10rem;
+
+    & h1{
+        color: white;
+    }
+}
+
+.the-barber{
+    width: 100%;
+    @include centerXColumn;
+    margin: 10rem 0rem;
+}
+
+.barber{
+    width: 14rem;
+}
+
+.barber-info{
+    width: auto;
+    @include centerXColumn;
+    position: relative;
+}
+
+
+.barbers-cuts{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+
+    & .haircuts{
+        width: 100%;
+        max-height: 25rem;
+        object-fit: cover;
+        transition: all 0.2s;
+
+        &:hover{
+            transform: scale(1.3);
+        }
+
+    }
+}
+
+.barber-tools{
+    width: 5rem;
+    animation-name: Wiggle;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+#comb{
+    position: absolute;
+    right: -10rem;
+    top: 15rem;
+    animation-delay: 0.5s;
+}
+
+#blade{
+    position: absolute;
+    left: -10rem;
+    top: 10rem;
+    animation-delay: 1s;
+}
+
+
+// review section
+#glass{
+    width: 25rem;
+    transform: rotate(-20deg);
+    position: absolute;
+    top: -10rem;
+    right: 10rem;
+}
+
+.review-section{
+    @include centerXColumn;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+    & h1{
+        margin-top: 20rem;
+
+    }
+}
+
+.reviews{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img{
+        width: 90%;
+    }
+}
+
+// contact
+
+.contact-section{
+    @include centerXColumn;
+    width: 100vw;
+    height: 100vh;
+}
+
+#map{
+    width: 70vw;
+    height: 50vh;
+    margin-top: 2rem;
+}
+
+.contact-info-container{
+    width: 70vw;
+    height: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(236, 236, 236);
+    border: solid 1px rgb(221, 221, 221);
+
+}
+
+.contact-info{
+    display: flex;
+    align-items: center;
+
+    & img, & span{
+        margin: 0rem 2rem;
+    }
+
+    & span{
+        font: bold 25px sans-serif;
+        cursor: pointer;
+
+        &:hover{
+            color: teal;
+        }
+    }
+
+}
+
+// Footer
+
+.footer{
+    width: 100vw;
+    height: 25rem;
+    background-color: rgb(39, 39, 39);
+    @include centerXColumn;
+    justify-content: center;
+    clip-path: polygon(0% 20%, 50% 0%, 100% 20%, 100% 100%, 0% 100%);
+}
+
+.footer-menu{
+    display: flex;
+    list-style: none;
+    & li{
+        margin: 0rem 2rem;
+        font-size: 20px;
+        color: white;
+    }
+}
+
+#scissors-footer{
+    width: 15rem;
+}
+
+
+// MEDIA QUERIES
+
+// XL screen
+
+@media screen and (max-width:1600px){
+    #big-blade{
+        width: 20rem;
+        top: -10rem;
+        left: 5rem;
+    }
+    #glass{
+        width: 20rem;
+        right: 5rem;
+    }
+}
+
+// Lg Laptop
+
+@media screen and (max-width:1440px){
+    // service
+    #hairguy{
+        width: 5rem;
+    }
+    #big-blade{
+        width: 15rem;
+        top: -7rem;
+    }
+
+    // barbers
+    #glass{
+        width: 15rem;
+    }
+
+    // contact
+    #map, .contact-info-container{
+        width: 90vw;
+    }
+
+}
+
+// laptop
+
+@media screen and (max-width:1024px){
+    // about
+    .about-wrapper{
+        flex-direction: column;
+    }
+    .about-info{
+        width: 80%;
+    }
+
+    // barbers
+
+    .barbers-cuts{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    // contact
+
+    .contact-info img{
+        width: 1.5rem;
+        margin: 0rem 1rem;
+    }
+    .contact-info span{
+        font-size: 18px;
+        margin: 0rem 1rem;
+    }
+}
+
+// tablet
+
+@media screen and (max-width:768px){
+    // nav
+    .links{
+        display: none;
+    }
+    // services
+    #big-blade{
+        display: none;
+    }
+
+    // about
+    #shop-img{
+        width: 90%;
+    }
+
+    // barbers
+    #glass{
+        display: none;
+    }
+    // contact
+    .contact-info-container{
+        flex-direction: column;
+    }
+
+    // footer
+    .footer-menu li{
+        margin: 0rem 1rem;
+    }
+}
+
+// mobile lg
+
+@media screen and (max-width:425px){
+    // services
+    .services{
+        min-height: 40rem;
+
+        & h1{
+            margin-top: 5rem;
+        }
+    }
+    .services-menu ul{
+        font-size: 16px;
+    }
+    // about
+    .about-section{
+        min-height: 40rem;
+    }
+    .about-info p{
+        font-size: 18px;
+    }
+
+    // barbers
+    .barbers-cuts{
+        grid-template-columns: 1fr;
+    }
+
+    // review
+    .review-section h1{
+        margin-top: 10rem;
+    }
+
+    // contact
+    .contact-info img{
+        margin: 0rem 0.1rem;
+    }
+    .contact-info span{
+        font-size: 14px;
+    }
+
+}
