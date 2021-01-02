@@ -34,7 +34,7 @@ body {
   display: none;
 }
 
-.top-nav {
+#top-nav {
   width: 100vw;
   height: auto;
   position: absolute;
@@ -386,6 +386,34 @@ body {
 
   #big-blade {
     display: none;
+  }
+
+  .subhead {
+    font-size: 40px;
+  }
+
+  .mustache-under {
+    width: 18rem;
+  }
+
+  .barber {
+    width: 10rem;
+  }
+
+  .barber-section h1 {
+    font-family: sans-serif;
+  }
+
+  .barber-tools {
+    width: 3rem;
+  }
+
+  #comb {
+    right: -4rem;
+  }
+
+  #blade {
+    left: -4rem;
   }
 
   #shop-img {
